@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CShapTestWebApi</name>
+    </assembly>
+    <members>
+        <member name="M:CShapTestWebApi.Controllers.ProductsController.Get">
+            <summary>
+            Get all products.
+            </summary>
+        </member>
+        <member name="M:CShapTestWebApi.Controllers.ProductsController.Get(System.Int32)">
+            <summary>
+            Get a specific product by ID.
+            </summary>
+            <param name="id">The ID of the product.</param>
+            <returns>The requested product.</returns>
+        </member>
+        <member name="M:CShapTestWebApi.Controllers.ProductsController.Post(CShapTestWebApi.Models.CreateProductModel)">
+            <summary>
+            Create a new product.
+            </summary>
+            <remarks>
+            Creates a new product with the provided details.
+            </remarks>
+            <param name="newProduct">The details of the new product.</param>
+            <returns>The newly created product.</returns>
+            <response code="200">Returns the newly created product.</response>
+            <response code="400">If the request is invalid or the product creation fails.</response>
+        </member>
+        <member name="M:CShapTestWebApi.Controllers.ProductsController.Put(System.Int32,CShapTestWebApi.Models.UpdateProductModel)">
+            <summary>
+            Update an existing product.
+            </summary>
+            <remarks>
+            Updates an existing product with the provided details.
+            </remarks>
+            <param name="id">The ID of the product to update.</param>
+            <param name="updatedProduct">The updated details of the product.</param>
+            <returns>No content.</returns>
+            <response code="204">No Content - Product successfully updated.</response>
+            <response code="400">Bad Request - If the request is invalid.</response>
+            <response code="404">Not Found - If the specified product is not found.</response>
+        </member>
+        <member name="M:CShapTestWebApi.Controllers.ProductsController.Delete(System.Int32)">
+            <summary>
+            Delete a specific product by ID.
+            </summary>
+            <param name="id">The ID of the product to delete.</param>
+            <returns>No content.</returns>
+            <response code="204">No Content - Product successfully deleted.</response>
+            <response code="404">Not Found - If the specified product is not found.</response>
+        </member>
+    </members>
+</doc>
